@@ -6,7 +6,7 @@ const user = (props) => {
         <div className="user">
             <b>Name:</b> {props.name}<br/>
             <b>Title:</b> {props.title}<br/>
-            <button><b>X</b></button>
+            <button onClick={props.click}><b>X</b></button>
         </div>
     );
 };
