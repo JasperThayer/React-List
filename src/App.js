@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import User from './User/user';
+import User from './User/User';
 
 class App extends Component {
   state = {
@@ -19,7 +19,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">React List by Jasper Thayer</h1>
         </header>
-        <div className="App-list">
+        <div className="User-list">
             {this.state.users.map(user => {
                 return <User
                     key={user._id}
