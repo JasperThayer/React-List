@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import User from './User/user';
 
 class App extends Component {
   render() {
@@ -9,8 +10,7 @@ class App extends Component {
           <h1 className="App-title">React List by Jasper Thayer</h1>
         </header>
         <div className="App-list">
-          <p>Create a class located at <code>src/App.js</code> that will display list of people</p>
-          <p>Add methods to the class that allow you to click a button to delete a user and enter text to change the user's data.</p>
+          <User />
         </div>
       </div>
     );
