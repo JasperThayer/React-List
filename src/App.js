@@ -5,11 +5,11 @@ import User from './User/user';
 class App extends Component {
   state = {
       users: [
-          {name: 'Jasper', title: 'react developer'},
-          {name: 'Marge', title: 'accounting manager'},
-          {name: 'Kyle', title: 'janitor'},
-          {name: 'Sean', title: 'security'},
-          {name: 'Richard', title: 'sales'}
+          {_id: 1, name: 'Jasper', title: 'react developer'},
+          {_id: 2, name: 'Marge', title: 'accounting manager'},
+          {_id: 3, name: 'Kyle', title: 'janitor'},
+          {_id: 4, name: 'Sean', title: 'security'},
+          {_id: 5, name: 'Richard', title: 'sales'}
       ]
   };
 
@@ -22,6 +22,7 @@ class App extends Component {
         <div className="App-list">
             {this.state.users.map(user => {
                 return <User
+                    key={user._id}
                     name={user.name}
                     title={user.title} />
             })}
