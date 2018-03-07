@@ -1,6 +1,12 @@
 .user {
+    position: relative;
     border: solid 1px #000000;
     padding:20px;
 }
 
-button {cursor:pointer;}
+button {
+    position:absolute;
+    top: 10px;
+    left: 10px;
+    cursor:pointer;
+}
