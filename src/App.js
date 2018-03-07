@@ -20,7 +20,11 @@ class App extends Component {
           <h1 className="App-title">React List by Jasper Thayer</h1>
         </header>
         <div className="App-list">
-          <User name={this.state.users[0].name} title={this.state.users[0].title} />
+            {this.state.users.map(user => {
+                return <User
+                    name={user.name}
+                    title={user.title} />
+            })}
         </div>
       </div>
     );
