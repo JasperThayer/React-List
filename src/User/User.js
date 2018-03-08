@@ -7,6 +7,7 @@ const user = (props) => {
             <b>Name:</b> {props.name}<br/>
             <b>Title:</b> {props.title}<br/>
             <button onClick={props.click}><b>X</b></button>
+            <input onChange={props.changed} />
         </div>
     );
 };
