@@ -57,9 +57,19 @@ class App extends Component {
     };
 
     render() {
+
+        const inlinestyle = {
+            backgroundColor: '#FF0000',
+            fontSize: '20px'
+        };
+
+        if (this.state.users.length > 1) {
+            inlinestyle.backgroundColor = '#00FF00'
+        }
+
         return (
             <div className="App">
-                <header className="App-header">
+                <header style={inlinestyle} className="App-header">
                     <h1 className="App-title">React List by Jasper Thayer</h1>
                 </header>
                 <div className="User-list">
