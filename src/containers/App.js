@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import User from './User/User';
+import Header from '../components/Header/Header';
+import Users from '../components/Users';
 
 class App extends Component {
 
@@ -57,30 +58,11 @@ class App extends Component {
     };
 
     render() {
-
-        const inlinestyle = {
-            backgroundColor: '#FF0000',
-            fontSize: '20px'
-        };
-
-        if (this.state.users.length > 1) {
-            inlinestyle.backgroundColor = '#00FF00'
-        }
-
         return (
             <div className="App">
-                <header style={inlinestyle} className="App-header">
-                    <h1 className="App-title">React List by Jasper Thayer</h1>
-                </header>
-                <div className="User-list">
-                    {this.state.users.map((user, index) => {
-                    return <User
-                        key={user._id}
-                        click={() => this.deleteUser(index)}
-                        name={user.name}
-                        title={user.title}
-                        changed={(event) => this.editUsername(event, user._id)} />
-                    })}
+                <Header users={this.state.users} />
+                <div className="Users">
+                    <Users users={this.state.users} clicked={this.deleteUser} changed={this.editUsername} />
                 </div>
             </div>
         );
